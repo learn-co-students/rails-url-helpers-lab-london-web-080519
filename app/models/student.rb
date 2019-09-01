@@ -4,7 +4,6 @@ class Student < ActiveRecord::Base
   end
 
   def change_status
-    #<%  @student.change_status %>
     self.active = !self.active
   end
 

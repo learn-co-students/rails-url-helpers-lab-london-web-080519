@@ -16,11 +16,6 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     @student.change_status
     @student.save
-    # if @student.active== "false"
-    #   @student.active == "true"
-    # else
-    #   @student.active == "false"
-    # end
     redirect_to student_path(@student) #students_path(@student)
   end
 
