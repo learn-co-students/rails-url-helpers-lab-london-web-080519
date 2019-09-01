@@ -1,3 +1,4 @@
+
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
   
@@ -13,7 +14,12 @@ class StudentsController < ApplicationController
 
   def activate_student
     @student = Student.find(params[:id])
-    redirect_to "/students/#{@student.id}"
+    # if @student.active== "false"
+    #   @student.active == "true"
+    # else
+    #   @student.active == "false"
+    # end
+    redirect_to student_path(@student) #students_path(@student)
   end
 
   private
