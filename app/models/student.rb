@@ -4,7 +4,6 @@ class Student < ActiveRecord::Base
   end
 
   # def active
-  #   "This student is currently #{self.active}."
   # end
 
 end
