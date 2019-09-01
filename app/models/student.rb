@@ -3,13 +3,9 @@ class Student < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
 
-  def activate_student
-    if @student.active== "false"
-      @student.active == "true"
-    else
-      @student.active == "false"
-    end
-    redirect_to 
+  def change_status
+    #<%  @student.change_status %>
+    self.active = !self.active
   end
 
 end
